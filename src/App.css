@@ -1,11 +1,31 @@
 .App {
   text-align: center;
+  /* background-color: #282c34; */
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
+
+.main-container{
+  /* background-color: #282c34; */
+  display: flex;
+  justify-content: center;
+}
+
+.todo-image{
+  width: 70px;
+  height: 70px;
+}
+
+
+.todo-caption{
+  color: aliceblue;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  margin-top: 10px;
+}
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
