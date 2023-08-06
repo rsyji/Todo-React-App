@@ -27,6 +27,42 @@
 }
 
 
+.input-field > input{
+  height: 20px;
+  width: 300px;
+  margin: 10px;
+  padding: 5px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bolder ;
+}
+
+.list-item{
+  display: inline;
+  color: aliceblue;
+  margin-right: 20px;
+  
+  
+}
+
+.content{
+  background-color: blue;
+  border-radius: 5px;
+  border: 1px solid white;
+  width: 300px;
+  position: relative;
+  text-align: center;
+  justify-content: center;
+}
+
+.content :hover{
+  background-color: yellowgreen ;
+}
+
+.delete-btn{
+  position: absolute;
+  right: 0;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
