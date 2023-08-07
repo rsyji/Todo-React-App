@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import todologo from '../images/todologo.png'
+import { AiOutlinePlus ,AiOutlineScissor} from 'react-icons/ai'
 
 const Todo = () => {
   const [input, setInput]= useState('')
@@ -30,14 +31,14 @@ const Todo = () => {
                 <figcaption className='todo-caption'>Enter Task Here 👌</figcaption>
             </figure>
             <div className='input-field'>
-                <input type='text' placeholder='✍️ Enter Text here' value={input} onChange={e=>setInput(e.target.value)}/><button className='add-btn' onClick={clickHandler}>+</button>
+                <input type='text' placeholder='✍️ Enter Text here' value={input} onChange={e=>setInput(e.target.value)}/><button className='add-btn' onClick={clickHandler}><AiOutlinePlus/></button>
             </div>
             <div className='items'>
               {
                 listArray.map((item,index)=>{
                   return(
                     <div className='content' key={index}>
-                    <h3 className='list-item'>{item}</h3><button className='delete-btn' onClick={()=>handleDelete(index)}>X</button>
+                    <h3 className='list-item'>{item}</h3><button className='delete-btn' onClick={()=>handleDelete(index)}><AiOutlineScissor/></button>
                     </div>
                   )
                 })
