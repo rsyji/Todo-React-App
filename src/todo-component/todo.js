@@ -1,10 +1,24 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import todologo from '../images/todologo.png'
 import { AiOutlinePlus ,AiOutlineScissor} from 'react-icons/ai'
 
+// getting data from localStorage
+
+const localList = ()=>{
+  let list= JSON.parse(localStorage.getItem('offlineList'))
+
+  if(list){
+    return(list)
+  }
+  else{
+    return([])
+  }
+}
+
+
 const Todo = () => {
   const [input, setInput]= useState('')
-  const [listArray, setListArray]= useState([])
+  const [listArray, setListArray]= useState(localList)
   const handleDelete = (id)=>{
     const updatedList = listArray.filter((item,index)=>{
       return index!==id
@@ -22,6 +36,11 @@ const Todo = () => {
     }
     
   }
+
+  useEffect(()=>{
+    localStorage.setItem('offlineList',JSON.stringify(listArray))
+  },[listArray])
+
   return (
     <>
     <div className='main-container'>
